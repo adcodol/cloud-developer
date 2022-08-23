@@ -40,3 +40,4 @@ import { config } from './config/config';
       console.log( `press CTRL+C to stop server` );
   } );
 })();
+
