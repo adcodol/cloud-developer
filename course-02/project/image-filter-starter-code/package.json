@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "prod": "tsc && node ./www/server.js",
     "clean": "rimraf www/ || true",
-    "build": "npm run clean && tsc && cp package.json www/package.json && mkdir www/tmp/ && cd www && zip -r Archive.zip . && cd ..",
+    "build": "npm run clean && tsc && cp package.json www/package.json && mkdir www\\tmp\\ && cd www && zip -r Archive.zip . && cd ..",
     "dev": "ts-node-dev --respawn --transpile-only ./src/server.ts"
   },
   "repository": {
@@ -33,5 +34,9 @@
     "lodash": "^4.17.15",
     "rimraf": "^3.0.2",
     "validator": "^13.7.0"
+  },
+  "engines" : { 
+    "npm" : ">=7.0.0",
+    "node" : ">=16.0.0"
   }
 }
