@@ -33,7 +33,6 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
     try {
       const validUrl = new URL(publicUrl);
     } catch(_){
-      console.log('Invalid');
       return res.status(400).send({ message: 'Valid url is required' });
     }
     const filteredpath = await filterImageFromURL(publicUrl)
