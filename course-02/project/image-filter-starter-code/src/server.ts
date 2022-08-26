@@ -41,7 +41,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
         deleteLocalFiles([filteredpath]);
       });
     } else {
-      res.status(400).send({ message: 'An error has occured' });
+      res.status(415).send({ message: 'An error has occured' });
     }
     });
   //! END @TODO1
